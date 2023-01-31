@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, LargeBinary
 from db import Base,engine
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -13,6 +14,7 @@ class Apartments(db.Model):
     price = db.Column(db.Integer)
     image_url = db.Column(db.String(100))
     image_path = db.Column(db.String(1000))
+
 
     #def __init__(self, title, url, price, image_url, image_path):
         #self.title = title
