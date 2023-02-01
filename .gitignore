@@ -1,0 +1,15 @@
+__init__.py
+__pycache__/
+config.py
+create_db.py
+db.py
+docker-compose.yml
+get_avito_ads.py
+instance/
+models.py
+parser.py
+photos/
+requirements.txt
+requirments.txt
+tasks.py
+views.py
