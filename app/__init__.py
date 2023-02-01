@@ -1,5 +1,6 @@
 from flask import Flask
-
+from flask import render_template
+from flask import send_from_directory
 from models import db, Apartments
 
 app = Flask(__name__)
@@ -8,7 +9,7 @@ db.init_app(app)
 
 @app.route('/')
 def index():
-    return 'Weird Appartment Finder!'
+    return render_template('index.html')
 
 def create_app() -> object:
     app = Flask(__name__)
@@ -23,6 +24,10 @@ def create_app() -> object:
         return 'Weird Appartment Finder!'
 
     return app
+
+@app.route('/static/<path:path>')
+def send_report(path):
+    return send_from_directory('static', path)
 
 if __name__ == '__main__':
     app.run(debug=True)

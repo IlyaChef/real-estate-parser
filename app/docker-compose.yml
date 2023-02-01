@@ -1,4 +1,28 @@
-FROM python: 3.10.9
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+  flask:
+    build: .
+    command: python -m flask run
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+      - ./.wdm:/.wdm
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+
+
 
 
 
