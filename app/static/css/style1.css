@@ -1,0 +1,39 @@
+:root {
+    --color3: #F08080;
+    --color4: #52339a;
+}
+header, footer {
+    padding: 50px 0;
+}
+header {
+    padding: 100px 0;
+}
+section {
+    padding: 80px 0;
+}
+
+header, footer {
+    background: url(../Result.jpg);
+    background: url(../Result.jpg);
+    background: url(../Result.jpg);
+    background: url(../Result.jpg);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color3), endColorstr=var(--color4),GradientType=1 );
+    background-size: contain;
+
+}
+
+section {
+    background: url(../White1.jpg);
+    background: url(../White1.jpg);
+    background: url(../White1.jpg);
+    background: url(../White1.jpg);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--color3), endColorstr=var(--color4),GradientType=1 );
+    background-size: contain;
+
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
