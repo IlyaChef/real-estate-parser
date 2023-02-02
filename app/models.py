@@ -15,6 +15,22 @@ class Apartments(db.Model):
     image_url = db.Column(db.String(100))
     image_path = db.Column(db.String(1000))
 
+    def __repr__(self):
+        return '<Apartments {}>'.format(self.title, self.url)
+
+#class Flat(db.Model):
+    #id = db.Column(db.Integer, primary_key=True)
+    #title = db.Column(db.String, unique=True, nullable=False)
+    #image = db.Column(db.String, nullable=False)
+    #url = db.Column(db.String, nullable=False)
+    #flat = db.Column(db.Integer, db.ForeignKey('flat.id'), nullable=False)
+
+    #@property
+    #def image_path(self):
+        #return f'/{app.config["MEDIA_PATH"]}/{self.image}'
+
+    #def __repr__(self):
+        #return self.name
 
     #def __init__(self, title, url, price, image_url, image_path):
         #self.title = title
@@ -23,8 +39,6 @@ class Apartments(db.Model):
         #self.image_url = image_url
         #self.image_path = image_path
 
-    def __repr__(self):
-        return '<Apartments {}>'.format(self.title, self.url)
 
 #if __name__ == '__main__':
     #Base.metadata.create_all(bind=engine)
