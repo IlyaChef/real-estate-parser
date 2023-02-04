@@ -60,8 +60,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class= "text-center">Weird apartment finder</h1>
-                    <div class="d-grid gap-2 col-6 mx-auto">
+                    <p class="center-img">
+                   <center> <img src="/static/WAF.png" class="img-fluid" alt="Центрируем изображение"></center>
+                    </p>
+                <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Найти необычную квартиру
                         </button>
@@ -87,11 +89,12 @@
                             <img src="{{ url_for('static', filename='media/' + flat.flat) }}" alt="{{ flat.flat }}"  width="400" height="300">
                             <div class="card-body">
                             <a href="{{ flat.url }}">{{ flat.title }}</a>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Ковер</li>
-                                <li class="list-group-item">Леопард</li>
-                                <li class="list-group-item">Сканди</li>
-                            </ul>
+                            <p class="card-text"> Бабушкин дизайн? Ответ: {{ flat.is_grandma }}</p>
+{#                            <ul class="list-group list-group-flush">#}
+{#                                <li class="list-group-item">Ковер</li>#}
+{#                                <li class="list-group-item">Леопард</li>#}
+{#                                <li class="list-group-item">Сканди</li>#}
+{#                            </ul>#}
                             </div>
                         </div>
                         </div>
